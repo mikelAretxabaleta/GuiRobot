@@ -15,20 +15,20 @@ public class GuiRobot {
      * @param args the command line arguments
      */
     public static PanelMovimientos pm = new PanelMovimientos();
-    public static Player p1 = new Player();
+    public static PlayerInit pi=new PlayerInit();
+    
 
-    public static Player p2 = new Player();
+   
 
     public static void start() {
         pm.setVisible(true);
-        p1.setVisible(true);
-        p1.setJugador(1);
-        p2.setVisible(true);
-        p2.setJugador(2);
+        pi.setVisible();
+	
     }
 
     public static void main(String[] args) {
         start();
+	
 
     }
 

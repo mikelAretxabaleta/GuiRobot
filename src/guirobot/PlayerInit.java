@@ -11,16 +11,18 @@ package guirobot;
  */
 public class PlayerInit {
     
-    public Player p= new Player();
+    Player p1 = new Player();
+    Player2 p2 = new Player2();
     
     
+    
+public void setVisible(){
+        p1.setVisible(true);
+        
+        p2.setVisible(true);
+        
+}
 
-    public Player getP() {
-        return p;
-    }
 
-    public void setP(Player p) {
-        this.p = p;
-    }
-    
+
 }
