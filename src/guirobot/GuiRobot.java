@@ -15,15 +15,17 @@ public class GuiRobot {
      * @param args the command line arguments
      */
     public static PanelMovimientos pm = new PanelMovimientos();
-    public static PlayerInit pi=new PlayerInit();
+    //public static PlayerInit pi=new PlayerInit();
     
 
    
 
     public static void start() {
         pm.setVisible(true);
-        pi.setVisible();
+        GuiRobot.pm.getjLabel3().setVisible(true);
+        //pi.setVisible();
 	
+       
     }
 
     public static void main(String[] args) {
