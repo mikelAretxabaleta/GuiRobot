@@ -101,50 +101,48 @@ public class PanelMovimientos extends javax.swing.JFrame {
 
                 jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guirobot/sky.png"))); // NOI18N
 
-                jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guirobot/robot.png"))); // NOI18N
+                jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guirobot/Android_robot.png"))); // NOI18N
                 jLabel2.setFocusCycleRoot(true);
                 jLabel2.setFocusTraversalPolicyProvider(true);
                 jLabel2.setNextFocusableComponent(jLabel2);
-                jLabel2.setOpaque(true);
 
                 jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-                jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guirobot/robot.png"))); // NOI18N
+                jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guirobot/Android_robot.png"))); // NOI18N
                 jLabel1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-                jLabel1.setOpaque(true);
 
                 jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-                jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guirobot/fire.png"))); // NOI18N
+                jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guirobot/fuego.png"))); // NOI18N
                 jLabel3.setMinimumSize(new java.awt.Dimension(0, 0));
                 jLabel3.setPreferredSize(new java.awt.Dimension(0, 0));
 
-                jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guirobot/fire.png"))); // NOI18N
+                jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guirobot/fuego.png"))); // NOI18N
                 jLabel4.setPreferredSize(new java.awt.Dimension(0, 0));
 
-                jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guirobot/fire.png"))); // NOI18N
+                jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guirobot/fuego.png"))); // NOI18N
                 jLabel5.setPreferredSize(new java.awt.Dimension(0, 0));
 
-                jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guirobot/fire.png"))); // NOI18N
+                jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guirobot/fuego.png"))); // NOI18N
                 jLabel6.setPreferredSize(new java.awt.Dimension(0, 0));
 
                 jOptionPane1.setMessage("You win!!!!");
 
-                jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guirobot/fire.png"))); // NOI18N
+                jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guirobot/fuego.png"))); // NOI18N
                 jLabel8.setText("jLabel8");
 
-                jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guirobot/fire.png"))); // NOI18N
+                jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guirobot/fuego.png"))); // NOI18N
                 jLabel9.setText("jLabel9");
 
-                jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guirobot/fire.png"))); // NOI18N
+                jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guirobot/fuego.png"))); // NOI18N
                 jLabel10.setText("jLabel10");
 
-                jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guirobot/fire.png"))); // NOI18N
+                jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guirobot/fuego.png"))); // NOI18N
                 jLabel11.setText("jLabel11");
 
                 jLabel12.setFont(new java.awt.Font("Cantarell", 0, 100)); // NOI18N
-                jLabel12.setText("Jugador 1");
+                jLabel12.setText("PLAYER1");
 
                 jLabel13.setFont(new java.awt.Font("Cantarell", 0, 100)); // NOI18N
-                jLabel13.setText("Jugador 2");
+                jLabel13.setText("PLAYER2");
 
                 jLabel14.setFont(new java.awt.Font("Cantarell", 0, 200)); // NOI18N
                 jLabel14.setForeground(new java.awt.Color(40, 172, 30));
@@ -555,7 +553,8 @@ public class PanelMovimientos extends javax.swing.JFrame {
 	public void actionPerformed(ActionEvent e) {
 		GuiRobot.pm.jLabel3.reshape((GuiRobot.pm.getjLabel3().getLocation().x+75), GuiRobot.pm.getjLabel3().getLocation().y, 75, 75);
 		if(GuiRobot.pm.getjLabel3().getLocation().x==GuiRobot.pm.getjLabel1().getLocation().x &&  GuiRobot.pm.getjLabel3().getLocation().y==GuiRobot.pm.getjLabel1().getLocation().y)
-		{JOptionPane.showMessageDialog(GuiRobot.pm, "PLAYER1 WINS!!!!"); contador1++;jLabel14.setText(String.valueOf(getContador1()));}
+		{//JOptionPane.showMessageDialog(GuiRobot.pm, "PLAYER1 WINS!!!!"); 
+		contador1++;jLabel14.setText(String.valueOf(getContador1()));}
 //To change body of generated methods, choose Tools | Templates.
 	}};
 	Timer timer1 = new Timer(200, al1);
@@ -565,7 +564,8 @@ public class PanelMovimientos extends javax.swing.JFrame {
 	public void actionPerformed(ActionEvent e) {
 		GuiRobot.pm.jLabel4.reshape((GuiRobot.pm.getjLabel4().getLocation().x+75), GuiRobot.pm.getjLabel4().getLocation().y, 75, 75);
                 if(GuiRobot.pm.getjLabel4().getLocation().x==GuiRobot.pm.getjLabel1().getLocation().x &&  GuiRobot.pm.getjLabel4().getLocation().y==GuiRobot.pm.getjLabel1().getLocation().y)
-		{JOptionPane.showMessageDialog(GuiRobot.pm, "PLAYER1 WINS!!!!");contador1++; jLabel14.setText(String.valueOf(getContador1()));}		
+		{//JOptionPane.showMessageDialog(GuiRobot.pm, "PLAYER1 WINS!!!!");
+		contador1++; jLabel14.setText(String.valueOf(getContador1()));}		
 //To change body of generated methods, choose Tools | Templates.
 	}};
 	Timer timer2 = new Timer(200, al2);
@@ -575,7 +575,8 @@ public class PanelMovimientos extends javax.swing.JFrame {
 	public void actionPerformed(ActionEvent e) {
 		GuiRobot.pm.jLabel5.reshape((GuiRobot.pm.getjLabel5().getLocation().x+75), GuiRobot.pm.getjLabel5().getLocation().y, 75, 75);
                 if(GuiRobot.pm.getjLabel5().getLocation().x==GuiRobot.pm.getjLabel1().getLocation().x &&  GuiRobot.pm.getjLabel5().getLocation().y==GuiRobot.pm.getjLabel1().getLocation().y)
-		{JOptionPane.showMessageDialog(GuiRobot.pm, "PLAYER1 WINS!!!!");contador1++;jLabel14.setText(String.valueOf(getContador1()));}		
+		{//JOptionPane.showMessageDialog(GuiRobot.pm, "PLAYER1 WINS!!!!");
+		contador1++;jLabel14.setText(String.valueOf(getContador1()));}		
 //To change body of generated methods, choose Tools | Templates.
 	}};
 	Timer timer3 = new Timer(200, al3);
@@ -585,7 +586,8 @@ public class PanelMovimientos extends javax.swing.JFrame {
 	public void actionPerformed(ActionEvent e) {
 		GuiRobot.pm.jLabel6.reshape((GuiRobot.pm.getjLabel6().getLocation().x+75), GuiRobot.pm.getjLabel6().getLocation().y, 75, 75);
                 if(GuiRobot.pm.getjLabel6().getLocation().x==GuiRobot.pm.getjLabel1().getLocation().x &&  GuiRobot.pm.getjLabel6().getLocation().y==GuiRobot.pm.getjLabel1().getLocation().y)
-		{JOptionPane.showMessageDialog(GuiRobot.pm, "PLAYER1 WINS!!!!");contador1++;jLabel14.setText(String.valueOf(getContador1()));}		
+		{//JOptionPane.showMessageDialog(GuiRobot.pm, "PLAYER1 WINS!!!!");
+		contador1++;jLabel14.setText(String.valueOf(getContador1()));}		
 //To change body of generated methods, choose Tools | Templates.
 	}};
 	Timer timer4 = new Timer(200, al4);
@@ -597,7 +599,8 @@ public class PanelMovimientos extends javax.swing.JFrame {
 	public void actionPerformed(ActionEvent e) {
 		GuiRobot.pm.jLabel8.reshape((GuiRobot.pm.getjLabel8().getLocation().x-75), GuiRobot.pm.getjLabel8().getLocation().y, 75, 75);
 		if(GuiRobot.pm.getjLabel8().getLocation().x==GuiRobot.pm.getjLabel2().getLocation().x &&  GuiRobot.pm.getjLabel8().getLocation().y==GuiRobot.pm.getjLabel2().getLocation().y)
-		{JOptionPane.showMessageDialog(GuiRobot.pm, "PLAYER2 WINS!!!!");contador2++;jLabel15.setText(String.valueOf(getContador2()));}
+		{//JOptionPane.showMessageDialog(GuiRobot.pm, "PLAYER2 WINS!!!!");
+		contador2++;jLabel15.setText(String.valueOf(getContador2()));}
 //To change body of generated methods, choose Tools | Templates.
 	}};
 	Timer timer5 = new Timer(200, al5);
@@ -607,7 +610,8 @@ public class PanelMovimientos extends javax.swing.JFrame {
 	public void actionPerformed(ActionEvent e) {
 		GuiRobot.pm.jLabel9.reshape((GuiRobot.pm.getjLabel9().getLocation().x-75), GuiRobot.pm.getjLabel9().getLocation().y, 75, 75);
                 if(GuiRobot.pm.getjLabel9().getLocation().x==GuiRobot.pm.getjLabel2().getLocation().x &&  GuiRobot.pm.getjLabel9().getLocation().y==GuiRobot.pm.getjLabel2().getLocation().y)
-		{JOptionPane.showMessageDialog(GuiRobot.pm, "PLAYER2 WINS!!!!");contador2++;jLabel15.setText(String.valueOf(getContador2()));}		
+		{//JOptionPane.showMessageDialog(GuiRobot.pm, "PLAYER2 WINS!!!!");
+		contador2++;jLabel15.setText(String.valueOf(getContador2()));}		
 //To change body of generated methods, choose Tools | Templates.
 	}};
 	Timer timer6 = new Timer(200, al6);
@@ -617,7 +621,8 @@ public class PanelMovimientos extends javax.swing.JFrame {
 	public void actionPerformed(ActionEvent e) {
 		GuiRobot.pm.jLabel10.reshape((GuiRobot.pm.getjLabel10().getLocation().x-75), GuiRobot.pm.getjLabel10().getLocation().y, 75, 75);
                 if(GuiRobot.pm.getjLabel10().getLocation().x==GuiRobot.pm.getjLabel2().getLocation().x &&  GuiRobot.pm.getjLabel10().getLocation().y==GuiRobot.pm.getjLabel2().getLocation().y)
-		{JOptionPane.showMessageDialog(GuiRobot.pm, "PLAYER2 WINS!!!!");contador2++;jLabel15.setText(String.valueOf(getContador2()));}		
+		{//JOptionPane.showMessageDialog(GuiRobot.pm, "PLAYER2 WINS!!!!");
+		contador2++;jLabel15.setText(String.valueOf(getContador2()));}		
 //To change body of generated methods, choose Tools | Templates.
 	}};
 	Timer timer7 = new Timer(200, al7);
@@ -627,7 +632,8 @@ public class PanelMovimientos extends javax.swing.JFrame {
 	public void actionPerformed(ActionEvent e) {
 		GuiRobot.pm.jLabel11.reshape((GuiRobot.pm.getjLabel11().getLocation().x-75), GuiRobot.pm.getjLabel11().getLocation().y, 75, 75);
                 if(GuiRobot.pm.getjLabel11().getLocation().x==GuiRobot.pm.getjLabel2().getLocation().x &&  GuiRobot.pm.getjLabel11().getLocation().y==GuiRobot.pm.getjLabel2().getLocation().y)
-		{JOptionPane.showMessageDialog(GuiRobot.pm, "PLAYER2 WINS!!!!");contador2++;jLabel15.setText(String.valueOf(getContador2()));}		
+		{//JOptionPane.showMessageDialog(GuiRobot.pm, "PLAYER2 WINS!!!!");
+		contador2++;jLabel15.setText(String.valueOf(getContador2()));}		
 //To change body of generated methods, choose Tools | Templates.
 	}};
 	Timer timer8 = new Timer(200, al8);
