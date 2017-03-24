@@ -22,7 +22,9 @@ public class GuiRobot {
 
     public static void start() {
         pm.setVisible(true);
-        GuiRobot.pm.getjLabel3().setVisible(true);
+	pm.reshape(400, 400, 750, 875);
+        pm.getjLabel2().reshape(0, 0, 75, 75);
+	
         //pi.setVisible();
 	
        

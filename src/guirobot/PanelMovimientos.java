@@ -5,17 +5,28 @@
  */
 package guirobot;
 
+import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.Timer;
 
 /**
  *
  * @author 7FPROG07
  */
 public class PanelMovimientos extends javax.swing.JFrame {
+    
+
+    int jLabel3set=0;
+    int jLabel4set=0;
+    int jLabel5set=0;
+    int jLabel6set=0;
     
     
     
@@ -24,8 +35,9 @@ public class PanelMovimientos extends javax.swing.JFrame {
      */
     public PanelMovimientos() {
         
+	  
        
-
+	    
 	
        
         
@@ -44,9 +56,16 @@ public class PanelMovimientos extends javax.swing.JFrame {
                 jLabel2 = new javax.swing.JLabel();
                 jLabel1 = new javax.swing.JLabel();
                 jLabel3 = new javax.swing.JLabel();
+                jLabel4 = new javax.swing.JLabel();
+                jLabel5 = new javax.swing.JLabel();
+                jLabel6 = new javax.swing.JLabel();
 
                 setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
                 setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+                setMaximumSize(new java.awt.Dimension(750, 750));
+                setMinimumSize(new java.awt.Dimension(750, 750));
+                setResizable(false);
+                setSize(new java.awt.Dimension(750, 750));
                 addKeyListener(new java.awt.event.KeyAdapter() {
                         public void keyTyped(java.awt.event.KeyEvent evt) {
                                 formKeyTyped(evt);
@@ -65,6 +84,17 @@ public class PanelMovimientos extends javax.swing.JFrame {
 
                 jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
                 jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guirobot/fire.png"))); // NOI18N
+                jLabel3.setMinimumSize(new java.awt.Dimension(0, 0));
+                jLabel3.setPreferredSize(new java.awt.Dimension(0, 0));
+
+                jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guirobot/fire.png"))); // NOI18N
+                jLabel4.setPreferredSize(new java.awt.Dimension(0, 0));
+
+                jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guirobot/fire.png"))); // NOI18N
+                jLabel5.setPreferredSize(new java.awt.Dimension(0, 0));
+
+                jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guirobot/fire.png"))); // NOI18N
+                jLabel6.setPreferredSize(new java.awt.Dimension(0, 0));
 
                 javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
                 getContentPane().setLayout(layout);
@@ -73,19 +103,32 @@ public class PanelMovimientos extends javax.swing.JFrame {
                         .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel3)
-                                .addGap(0, 594, Short.MAX_VALUE))
+                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
                                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                                .addGap(109, 109, 109)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addContainerGap(641, Short.MAX_VALUE))
                 );
                 layout.setVerticalGroup(
                         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jLabel2)
-                                        .addComponent(jLabel3))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 600, Short.MAX_VALUE)
+                                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(82, 82, 82)
+                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(62, 62, 62)
+                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(80, 80, 80)
+                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 376, Short.MAX_VALUE)
                                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
                 );
 
@@ -94,6 +137,7 @@ public class PanelMovimientos extends javax.swing.JFrame {
 
     private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed
         int c = evt.getKeyCode();
+	
         if( c == java.awt.event.KeyEvent.VK_P){
           if (GuiRobot.pm.getjLabel2().getLocation().x<675 && GuiRobot.pm.getjLabel2().getLocation().x>=0)
         GuiRobot.pm.getjLabel2().setLocation((GuiRobot.pm.getjLabel2().getLocation().x+75), GuiRobot.pm.getjLabel2().getLocation().y);  
@@ -113,11 +157,32 @@ public class PanelMovimientos extends javax.swing.JFrame {
         GuiRobot.pm.getjLabel2().setLocation((GuiRobot.pm.getjLabel2().getLocation().x), GuiRobot.pm.getjLabel2().getLocation().y-75);
         }
         if( c == java.awt.event.KeyEvent.VK_SPACE){
-        
-        
-        GuiRobot.pm.getjLabel3().setLocation((GuiRobot.pm.getjLabel2().getLocation().x+75), GuiRobot.pm.getjLabel2().getLocation().y);
-        
-        repaint();
+        if (jLabel3set==0){
+		
+        GuiRobot.pm.jLabel3.reshape((GuiRobot.pm.getjLabel2().getLocation().x+75), GuiRobot.pm.getjLabel2().getLocation().y, 75, 75);
+	jLabel3set=1;
+	timer1.start();
+	}
+	else if (jLabel4set==0){
+        GuiRobot.pm.jLabel4.reshape((GuiRobot.pm.getjLabel2().getLocation().x+75), GuiRobot.pm.getjLabel2().getLocation().y, 75, 75);
+	jLabel4set=1;
+	timer2.start();
+	}
+	else if (jLabel5set==0){
+        GuiRobot.pm.jLabel5.reshape((GuiRobot.pm.getjLabel2().getLocation().x+75), GuiRobot.pm.getjLabel2().getLocation().y, 75, 75);
+	jLabel5set=1;
+	timer3.start();
+	}
+	else if (jLabel6set==0){
+        GuiRobot.pm.jLabel6.reshape((GuiRobot.pm.getjLabel2().getLocation().x+75), GuiRobot.pm.getjLabel2().getLocation().y, 75, 75);
+	jLabel6set=1;
+	timer4.start();
+	}
+	else {jLabel3set=0;
+              jLabel4set=0;
+              jLabel5set=0;
+              jLabel6set=0;}
+	
         }
     }//GEN-LAST:event_formKeyPressed
 
@@ -164,6 +229,9 @@ public class PanelMovimientos extends javax.swing.JFrame {
         private javax.swing.JLabel jLabel1;
         private javax.swing.JLabel jLabel2;
         private javax.swing.JLabel jLabel3;
+        private javax.swing.JLabel jLabel4;
+        private javax.swing.JLabel jLabel5;
+        private javax.swing.JLabel jLabel6;
         // End of variables declaration//GEN-END:variables
 
 	public JLabel getjLabel1() {
@@ -190,6 +258,64 @@ public class PanelMovimientos extends javax.swing.JFrame {
         this.jLabel3 = jLabel3;
     }
 
+	public JLabel getjLabel4() {
+		return jLabel4;
+	}
+
+	public void setjLabel4(JLabel jLabel4) {
+		this.jLabel4 = jLabel4;
+	}
+
+	public JLabel getjLabel5() {
+		return jLabel5;
+	}
+
+	public void setjLabel5(JLabel jLabel5) {
+		this.jLabel5 = jLabel5;
+	}
+
+	public JLabel getjLabel6() {
+		return jLabel6;
+	}
+
+	public void setjLabel6(JLabel jLabel6) {
+		this.jLabel6 = jLabel6;
+	}
+    
+    
+        
+		
+	ActionListener al1=new ActionListener() {
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		GuiRobot.pm.jLabel3.reshape((GuiRobot.pm.getjLabel3().getLocation().x+75), GuiRobot.pm.getjLabel3().getLocation().y, 75, 75);
+		//To change body of generated methods, choose Tools | Templates.
+	}};
+	Timer timer1 = new Timer(200, al1);
+    
+	ActionListener al2=new ActionListener() {
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		GuiRobot.pm.jLabel4.reshape((GuiRobot.pm.getjLabel4().getLocation().x+75), GuiRobot.pm.getjLabel4().getLocation().y, 75, 75);
+		//To change body of generated methods, choose Tools | Templates.
+	}};
+	Timer timer2 = new Timer(200, al2);
+    
+	ActionListener al3=new ActionListener() {
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		GuiRobot.pm.jLabel5.reshape((GuiRobot.pm.getjLabel5().getLocation().x+75), GuiRobot.pm.getjLabel5().getLocation().y, 75, 75);
+		//To change body of generated methods, choose Tools | Templates.
+	}};
+	Timer timer3 = new Timer(200, al3);
+
+	ActionListener al4=new ActionListener() {
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		GuiRobot.pm.jLabel6.reshape((GuiRobot.pm.getjLabel6().getLocation().x+75), GuiRobot.pm.getjLabel6().getLocation().y, 75, 75);
+		//To change body of generated methods, choose Tools | Templates.
+	}};
+	Timer timer4 = new Timer(200, al4);
     
         
 
