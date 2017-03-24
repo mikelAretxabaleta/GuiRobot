@@ -17,6 +17,7 @@ import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 import javax.swing.Timer;
 
 /**
@@ -28,14 +29,16 @@ public class PanelMovimientos extends javax.swing.JFrame {
 	
     
     
-    int jLabel3set=0;
-    int jLabel4set=0;
-    int jLabel5set=0;
-    int jLabel6set=0;
-    int jLabel8set=0;
-    int jLabel9set=0;
-    int jLabel10set=0;
-    int jLabel11set=0;
+    private int jLabel3set=0;
+    private int jLabel4set=0;
+    private int jLabel5set=0;
+    private int jLabel6set=0;
+    private int jLabel8set=0;
+    private int jLabel9set=0;
+    private int jLabel10set=0;
+    private int jLabel11set=0;
+    private int contador1=0;
+    private int contador2=0;
     
     
     
@@ -75,6 +78,10 @@ public class PanelMovimientos extends javax.swing.JFrame {
                 jLabel9 = new javax.swing.JLabel();
                 jLabel10 = new javax.swing.JLabel();
                 jLabel11 = new javax.swing.JLabel();
+                jLabel12 = new javax.swing.JLabel();
+                jLabel13 = new javax.swing.JLabel();
+                jLabel14 = new javax.swing.JLabel();
+                jLabel15 = new javax.swing.JLabel();
 
                 setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
                 setBackground(new java.awt.Color(52, 45, 201));
@@ -91,60 +98,139 @@ public class PanelMovimientos extends javax.swing.JFrame {
                                 formKeyPressed(evt);
                         }
                 });
-                getContentPane().setLayout(new javax.swing.OverlayLayout(getContentPane()));
 
                 jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guirobot/sky.png"))); // NOI18N
-                getContentPane().add(jLabel7);
 
                 jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guirobot/robot.png"))); // NOI18N
                 jLabel2.setFocusCycleRoot(true);
                 jLabel2.setFocusTraversalPolicyProvider(true);
                 jLabel2.setNextFocusableComponent(jLabel2);
                 jLabel2.setOpaque(true);
-                getContentPane().add(jLabel2);
 
                 jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
                 jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guirobot/robot.png"))); // NOI18N
                 jLabel1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
                 jLabel1.setOpaque(true);
-                getContentPane().add(jLabel1);
 
                 jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
                 jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guirobot/fire.png"))); // NOI18N
                 jLabel3.setMinimumSize(new java.awt.Dimension(0, 0));
                 jLabel3.setPreferredSize(new java.awt.Dimension(0, 0));
-                getContentPane().add(jLabel3);
 
                 jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guirobot/fire.png"))); // NOI18N
                 jLabel4.setPreferredSize(new java.awt.Dimension(0, 0));
-                getContentPane().add(jLabel4);
 
                 jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guirobot/fire.png"))); // NOI18N
                 jLabel5.setPreferredSize(new java.awt.Dimension(0, 0));
-                getContentPane().add(jLabel5);
 
                 jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guirobot/fire.png"))); // NOI18N
                 jLabel6.setPreferredSize(new java.awt.Dimension(0, 0));
-                getContentPane().add(jLabel6);
 
                 jOptionPane1.setMessage("You win!!!!");
-                getContentPane().add(jOptionPane1);
 
                 jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guirobot/fire.png"))); // NOI18N
                 jLabel8.setText("jLabel8");
-                getContentPane().add(jLabel8);
 
                 jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guirobot/fire.png"))); // NOI18N
                 jLabel9.setText("jLabel9");
-                getContentPane().add(jLabel9);
 
                 jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guirobot/fire.png"))); // NOI18N
                 jLabel10.setText("jLabel10");
-                getContentPane().add(jLabel10);
 
                 jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guirobot/fire.png"))); // NOI18N
                 jLabel11.setText("jLabel11");
-                getContentPane().add(jLabel11);
+
+                jLabel12.setFont(new java.awt.Font("Cantarell", 0, 100)); // NOI18N
+                jLabel12.setText("Jugador 1");
+
+                jLabel13.setFont(new java.awt.Font("Cantarell", 0, 100)); // NOI18N
+                jLabel13.setText("Jugador 2");
+
+                jLabel14.setFont(new java.awt.Font("Cantarell", 0, 200)); // NOI18N
+                jLabel14.setForeground(new java.awt.Color(40, 172, 30));
+                jLabel14.setText("0");
+
+                jLabel15.setFont(new java.awt.Font("Cantarell", 0, 200)); // NOI18N
+                jLabel15.setForeground(new java.awt.Color(154, 14, 42));
+                jLabel15.setText("0");
+
+                javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+                getContentPane().setLayout(layout);
+                layout.setHorizontalGroup(
+                        layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addGroup(layout.createSequentialGroup()
+                                                                .addGap(210, 210, 210)
+                                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                                        .addComponent(jLabel9)
+                                                                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addComponent(jLabel1)
+                                                                        .addComponent(jLabel2)
+                                                                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addComponent(jLabel8)
+                                                                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                                .addGap(150, 150, 150)
+                                                                .addComponent(jLabel11))
+                                                        .addGroup(layout.createSequentialGroup()
+                                                                .addGap(153, 153, 153)
+                                                                .addComponent(jLabel13))
+                                                        .addGroup(layout.createSequentialGroup()
+                                                                .addComponent(jOptionPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addGap(28, 28, 28)
+                                                                .addComponent(jLabel10))
+                                                        .addGroup(layout.createSequentialGroup()
+                                                                .addGap(110, 110, 110)
+                                                                .addComponent(jLabel14)
+                                                                .addGap(116, 116, 116)
+                                                                .addComponent(jLabel15)))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 1293, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(274, 274, 274)
+                                                .addComponent(jLabel12)))
+                                .addGap(3024, 3024, 3024))
+                );
+                layout.setVerticalGroup(
+                        layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addGap(140, 140, 140)
+                                .addComponent(jLabel9)
+                                .addGap(33, 33, 33)
+                                .addComponent(jOptionPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(29, 29, 29)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel1)
+                                        .addComponent(jLabel2)
+                                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel8))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel13)
+                                .addGap(74, 74, 74)
+                                .addComponent(jLabel12)
+                                .addGap(54, 54, 54)
+                                .addComponent(jLabel14)
+                                .addGap(66, 66, 66))
+                        .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(69, 69, 69)
+                                                .addComponent(jLabel7))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(196, 196, 196)
+                                                .addComponent(jLabel10)
+                                                .addGap(189, 189, 189)
+                                                .addComponent(jLabel11)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel15)
+                                .addGap(42, 42, 42))
+                );
 
                 pack();
         }// </editor-fold>//GEN-END:initComponents
@@ -294,6 +380,10 @@ public class PanelMovimientos extends javax.swing.JFrame {
         private javax.swing.JLabel jLabel1;
         private javax.swing.JLabel jLabel10;
         private javax.swing.JLabel jLabel11;
+        private javax.swing.JLabel jLabel12;
+        private javax.swing.JLabel jLabel13;
+        private javax.swing.JLabel jLabel14;
+        private javax.swing.JLabel jLabel15;
         private javax.swing.JLabel jLabel2;
         private javax.swing.JLabel jLabel3;
         private javax.swing.JLabel jLabel4;
@@ -402,6 +492,56 @@ public class PanelMovimientos extends javax.swing.JFrame {
 		this.jLabel9 = jLabel9;
 	}
 
+	public JLabel getjLabel12() {
+		return jLabel12;
+	}
+
+	public void setjLabel12(JLabel jLabel12) {
+		this.jLabel12 = jLabel12;
+	}
+
+	public JLabel getjLabel13() {
+		return jLabel13;
+	}
+
+	public void setjLabel13(JLabel jLabel13) {
+		this.jLabel13 = jLabel13;
+	}
+
+	public JLabel getjLabel14() {
+		return jLabel14;
+	}
+
+	public void setjLabel14(JLabel jLabel14) {
+		this.jLabel14 = jLabel14;
+	}
+
+	public JLabel getjLabel15() {
+		return jLabel15;
+	}
+
+	public void setjLabel15(JLabel jLabel15) {
+		this.jLabel15 = jLabel15;
+	}
+
+	public int getContador1() {
+		return contador1;
+	}
+
+	public void setContador1(int contador1) {
+		this.contador1 = contador1;
+	}
+
+	public int getContador2() {
+		return contador2;
+	}
+
+	public void setContador2(int contador2) {
+		this.contador2 = contador2;
+	}
+
+	
+
 	
 
 	
@@ -415,7 +555,7 @@ public class PanelMovimientos extends javax.swing.JFrame {
 	public void actionPerformed(ActionEvent e) {
 		GuiRobot.pm.jLabel3.reshape((GuiRobot.pm.getjLabel3().getLocation().x+75), GuiRobot.pm.getjLabel3().getLocation().y, 75, 75);
 		if(GuiRobot.pm.getjLabel3().getLocation().x==GuiRobot.pm.getjLabel1().getLocation().x &&  GuiRobot.pm.getjLabel3().getLocation().y==GuiRobot.pm.getjLabel1().getLocation().y)
-			JOptionPane.showMessageDialog(GuiRobot.pm, "PLAYER1 WINS!!!!");
+		{JOptionPane.showMessageDialog(GuiRobot.pm, "PLAYER1 WINS!!!!"); contador1++;jLabel14.setText(String.valueOf(getContador1()));}
 //To change body of generated methods, choose Tools | Templates.
 	}};
 	Timer timer1 = new Timer(200, al1);
@@ -425,7 +565,7 @@ public class PanelMovimientos extends javax.swing.JFrame {
 	public void actionPerformed(ActionEvent e) {
 		GuiRobot.pm.jLabel4.reshape((GuiRobot.pm.getjLabel4().getLocation().x+75), GuiRobot.pm.getjLabel4().getLocation().y, 75, 75);
                 if(GuiRobot.pm.getjLabel4().getLocation().x==GuiRobot.pm.getjLabel1().getLocation().x &&  GuiRobot.pm.getjLabel4().getLocation().y==GuiRobot.pm.getjLabel1().getLocation().y)
-			JOptionPane.showMessageDialog(GuiRobot.pm, "PLAYER1 WINS!!!!");		
+		{JOptionPane.showMessageDialog(GuiRobot.pm, "PLAYER1 WINS!!!!");contador1++; jLabel14.setText(String.valueOf(getContador1()));}		
 //To change body of generated methods, choose Tools | Templates.
 	}};
 	Timer timer2 = new Timer(200, al2);
@@ -435,7 +575,7 @@ public class PanelMovimientos extends javax.swing.JFrame {
 	public void actionPerformed(ActionEvent e) {
 		GuiRobot.pm.jLabel5.reshape((GuiRobot.pm.getjLabel5().getLocation().x+75), GuiRobot.pm.getjLabel5().getLocation().y, 75, 75);
                 if(GuiRobot.pm.getjLabel5().getLocation().x==GuiRobot.pm.getjLabel1().getLocation().x &&  GuiRobot.pm.getjLabel5().getLocation().y==GuiRobot.pm.getjLabel1().getLocation().y)
-			JOptionPane.showMessageDialog(GuiRobot.pm, "PLAYER1 WINS!!!!");		
+		{JOptionPane.showMessageDialog(GuiRobot.pm, "PLAYER1 WINS!!!!");contador1++;jLabel14.setText(String.valueOf(getContador1()));}		
 //To change body of generated methods, choose Tools | Templates.
 	}};
 	Timer timer3 = new Timer(200, al3);
@@ -445,7 +585,7 @@ public class PanelMovimientos extends javax.swing.JFrame {
 	public void actionPerformed(ActionEvent e) {
 		GuiRobot.pm.jLabel6.reshape((GuiRobot.pm.getjLabel6().getLocation().x+75), GuiRobot.pm.getjLabel6().getLocation().y, 75, 75);
                 if(GuiRobot.pm.getjLabel6().getLocation().x==GuiRobot.pm.getjLabel1().getLocation().x &&  GuiRobot.pm.getjLabel6().getLocation().y==GuiRobot.pm.getjLabel1().getLocation().y)
-			JOptionPane.showMessageDialog(GuiRobot.pm, "PLAYER1 WINS!!!!");		
+		{JOptionPane.showMessageDialog(GuiRobot.pm, "PLAYER1 WINS!!!!");contador1++;jLabel14.setText(String.valueOf(getContador1()));}		
 //To change body of generated methods, choose Tools | Templates.
 	}};
 	Timer timer4 = new Timer(200, al4);
@@ -457,7 +597,7 @@ public class PanelMovimientos extends javax.swing.JFrame {
 	public void actionPerformed(ActionEvent e) {
 		GuiRobot.pm.jLabel8.reshape((GuiRobot.pm.getjLabel8().getLocation().x-75), GuiRobot.pm.getjLabel8().getLocation().y, 75, 75);
 		if(GuiRobot.pm.getjLabel8().getLocation().x==GuiRobot.pm.getjLabel2().getLocation().x &&  GuiRobot.pm.getjLabel8().getLocation().y==GuiRobot.pm.getjLabel2().getLocation().y)
-			JOptionPane.showMessageDialog(GuiRobot.pm, "PLAYER2 WINS!!!!");
+		{JOptionPane.showMessageDialog(GuiRobot.pm, "PLAYER2 WINS!!!!");contador2++;jLabel15.setText(String.valueOf(getContador2()));}
 //To change body of generated methods, choose Tools | Templates.
 	}};
 	Timer timer5 = new Timer(200, al5);
@@ -467,7 +607,7 @@ public class PanelMovimientos extends javax.swing.JFrame {
 	public void actionPerformed(ActionEvent e) {
 		GuiRobot.pm.jLabel9.reshape((GuiRobot.pm.getjLabel9().getLocation().x-75), GuiRobot.pm.getjLabel9().getLocation().y, 75, 75);
                 if(GuiRobot.pm.getjLabel9().getLocation().x==GuiRobot.pm.getjLabel2().getLocation().x &&  GuiRobot.pm.getjLabel9().getLocation().y==GuiRobot.pm.getjLabel2().getLocation().y)
-			JOptionPane.showMessageDialog(GuiRobot.pm, "PLAYER2 WINS!!!!");		
+		{JOptionPane.showMessageDialog(GuiRobot.pm, "PLAYER2 WINS!!!!");contador2++;jLabel15.setText(String.valueOf(getContador2()));}		
 //To change body of generated methods, choose Tools | Templates.
 	}};
 	Timer timer6 = new Timer(200, al6);
@@ -477,7 +617,7 @@ public class PanelMovimientos extends javax.swing.JFrame {
 	public void actionPerformed(ActionEvent e) {
 		GuiRobot.pm.jLabel10.reshape((GuiRobot.pm.getjLabel10().getLocation().x-75), GuiRobot.pm.getjLabel10().getLocation().y, 75, 75);
                 if(GuiRobot.pm.getjLabel10().getLocation().x==GuiRobot.pm.getjLabel2().getLocation().x &&  GuiRobot.pm.getjLabel10().getLocation().y==GuiRobot.pm.getjLabel2().getLocation().y)
-			JOptionPane.showMessageDialog(GuiRobot.pm, "PLAYER2 WINS!!!!");		
+		{JOptionPane.showMessageDialog(GuiRobot.pm, "PLAYER2 WINS!!!!");contador2++;jLabel15.setText(String.valueOf(getContador2()));}		
 //To change body of generated methods, choose Tools | Templates.
 	}};
 	Timer timer7 = new Timer(200, al7);
@@ -487,7 +627,7 @@ public class PanelMovimientos extends javax.swing.JFrame {
 	public void actionPerformed(ActionEvent e) {
 		GuiRobot.pm.jLabel11.reshape((GuiRobot.pm.getjLabel11().getLocation().x-75), GuiRobot.pm.getjLabel11().getLocation().y, 75, 75);
                 if(GuiRobot.pm.getjLabel11().getLocation().x==GuiRobot.pm.getjLabel2().getLocation().x &&  GuiRobot.pm.getjLabel11().getLocation().y==GuiRobot.pm.getjLabel2().getLocation().y)
-			JOptionPane.showMessageDialog(GuiRobot.pm, "PLAYER2 WINS!!!!");		
+		{JOptionPane.showMessageDialog(GuiRobot.pm, "PLAYER2 WINS!!!!");contador2++;jLabel15.setText(String.valueOf(getContador2()));}		
 //To change body of generated methods, choose Tools | Templates.
 	}};
 	Timer timer8 = new Timer(200, al8);

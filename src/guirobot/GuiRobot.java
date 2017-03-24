@@ -24,7 +24,6 @@ public class GuiRobot {
     public static PanelMovimientos pm = new PanelMovimientos();
     //public static PlayerInit pi=new PlayerInit();
     
-
    
 
     public static void start() {
@@ -44,8 +43,17 @@ public class GuiRobot {
 	pm.getContentPane().add(pm.getjLabel9()).setBounds(0, 0, 0, 0);
 	pm.getContentPane().add(pm.getjLabel10()).setBounds(0, 0, 0, 0);
 	pm.getContentPane().add(pm.getjLabel11()).setBounds(0, 0, 0, 0);
+	
+	pm.getContentPane().add(pm.getjLabel12()).setBounds(0, 0, 500, 200);
+	pm.getContentPane().add(pm.getjLabel13()).setBounds(0, 500, 500, 200);
+	pm.getContentPane().add(pm.getjLabel14()).setBounds(500, 0, 250, 200);
+	pm.getContentPane().add(pm.getjLabel15()).setBounds(500, 500, 250, 200);
+	
 	pm.getContentPane().setBounds(0, 0, 750, 750);
 	pm.setBounds(0, 0, 750, 875);
+	
+	
+	
 	/*
 	BufferedImage img = null;
 try {
